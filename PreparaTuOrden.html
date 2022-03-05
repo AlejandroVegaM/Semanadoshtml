@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> <!---Set de caracteres-->
+        <meta http-equiv="compatible" content="IE=edge"> <!--Parte de equivalencia--> 
+        <meta name=" viewport" content="width=device-width, initial-scale=1.0"> <!--Vista general como va a desplegarse el sitio por default-->
+        <link rel="icon" href=".\Imagenes\Icono.ico">
+        <title>Prepara Tu Orden</title>
+    </head>
+    <body>
+        <h1>Prepara tu Orden</h1>
+        <h2>Hora de crear tu Pastelar</h2>
+        <p>Puedes combiar hasta tres sabores Galacticos asi como adornos para tu Pastelar</p>
+        <h2>Eligue los Sabores Galacticos de tu Pastelar</h2>
+        <select name="Pasteles Espaciales" id="Pasteles Espaciales">
+            <option value=" ">  </option>
+            <option value="Chocolate">Chocolate</option>
+            <option value="Capuchino">Capuchino</option>
+            <option value="Frambuesa">Frambuesa</option>
+            <option value="Chocoflan">Chocoflan</option>
+            <option value="Moca">Moca</option>
+            <option value="Nutella">Nutella</option>
+        </select> 
+
+        <select name="Pasteles Lunares" id="Pasteles Lunares">
+            <option value=" ">  </option>
+            <option value="Vainilla">Vainilla</option>
+            <option value="Mil Hojas">Mil Hojas</option>
+            <option value="Durazno">Durazno</option>
+            <option value="Fresa">Fresa</option>
+            <option value="Tres Leches">Tres Leches</option>
+            <option value="Cereza">Cereza</option>
+        </select> 
+
+        <select name="Pasteles Galacticos" id="Pasteles Galacticos">
+            <option value=" ">  </option>
+            <option value="Coco">Coco</option>
+            <option value="Nuez">Nuez</option>
+            <option value="Almendras">Almendras</option>
+            <option value="Rompope">Rompope</option>
+            <option value="Zanahoria">Zanahoria</option>
+            <option value="Amapola y limon">Amapola y limon</option>
+        </select>
+                
+        <h2>Eligue Tus Adornos</h2>
+        <input type="checkbox" id="fondant" name="fondant" value="Flores con Fondant">
+        <label for="fondant"> Flores con fondant</label><br> 
+        <input type="checkbox" name="Durazno" id="Durazno" value=" Cubierta de Durazno">
+        <label for="Durazno">Cubierta de Durazno</label> <br>
+        <input type="checkbox" name="Fresa" id="Fresa" value="Cubierta de Fresa">
+        <label for="Fresa">Cubierta de Fresa</label><br>
+        <input type="checkbox" name="Uva" id="Uva" value="Cubierta de Uva">
+        <label for="Uva">Cubierta de Uva</label><br>
+        <input type="checkbox" name="Chispitas" id="Chispitas" value="Chispitas de Colores">
+        <label for="Chhispitas">Chispitas</label><br><br>
+        <input type="button" id="Botonformulario2" onclick="enviarinfo()" value="Guardar">
+
+        <hr>
+        <h1>Ingresa tus datos para tu pedido Galactico</h1>
+        <label for="Nombre">Ingresa tu Nombre completo</label> <br>
+        <input type="text" id="Nombre" name="Nombre" placeholder="Juanito Ramirez"> <br>
+        <label for="Numero">Ingresa tu numero</label> <br>
+        <input type="number" id="Numero" name="Numero" placeholder="5538384744"><br>
+        <label for="correo">Ingresa tu correo electronico</label><br>
+        <input type="email" name="Correo" id="Correo" placeholder="juanito@domino.com"> 
+
+        <h2>Tu pedido es el siguiente</h2>
+        <textarea name="Texto1" id="texto1" cols="30" rows="5">Tu Orden es:</textarea>
+        <script>
+            function enviarinfo()
+            {
+                var Espacial = document.getElementById("Pasteles Espaciales").value;
+                var Lunar = document.getElementById("Pasteles Lunares").value;
+                var Galactico = document.getElementById("Pasteles Galacticos").value;
+                var flores =document.getElementById("fondant").value
+                var Durazno =document.getElementById("Durazno").value
+                var Fresa =document.getElementById("Fresa").value
+                var Uva =document.getElementById("Uva").value
+                var Chispitas =document.getElementById("Chispitas").value
+
+                document.getElementById("texto1").value= "Un Pastel de: " + Espacial + " Con " + Lunar + "  " + Galactico 
+                + " y con decoracion de: "  + flores +  " " + Durazno + " " +  Fresa + " " + Uva + " " + Chispitas; 
+            }
+        </script>
+        <br><br>
+        <input type="reset">
+        <input type="submit">
+        <br><br>        
+    </body>
+</html>
